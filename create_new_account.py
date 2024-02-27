@@ -46,16 +46,18 @@ def submit():
         conn = sqlite3.connect('Bank Management System.db')
         cursor = conn.cursor()
         cursor.execute("INSERT INTO accounts VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-              (account_number_entry.get(),
-               name_entry.get().upper(),
-               gender.get(),
-               dob_entry.get().upper(),
-               email_entry.get().lower(),
-               phone_number_entry.get(),
-               address_entry.get().upper(),
-               0.0
+               (account_number_entry.get(),
+                name_entry.get().upper(),
+                gender.get(),
+                dob_entry.get().upper(),
+                email_entry.get().lower(),
+                phone_number_entry.get(),
+                address_entry.get().upper(),
+                0.0
                )
-               )
+              )
+
+
         conn.commit()
         conn.close()
         messagebox.showinfo("Account Created Successfully", f"AC No: {account_number_entry.get()} has been created successfully")
@@ -83,7 +85,7 @@ name_label.place(x=100,y=160)
 gender_label=Label(root, text="Select Gender : ",font=("Arial ",12,"bold"))
 gender_label.place(x=100,y=200)
 
-gender = StringVar(value="M")
+gender = StringVar(value="F")
 
 radio1 = Radiobutton(root, text="Male", font=("Arial ", 10), variable=gender, value="M")
 radio1.place(x=250, y=200)

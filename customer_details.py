@@ -4,11 +4,11 @@ import sqlite3
 root.title("Customer Details")
 root.minsize(width=1500,height=1000)
 
-
+#labels
 line_label = Label(root, text="__________________________________________________________________________________________________________________________________________________________________________________________", font=("Arial", 16, "bold"),fg="green")
 line_label.place(y=25)
 
-account_number_label = Label(root, text="Acount Number ", font=("Arial", 12, "bold"),fg="blue")
+account_number_label = Label(root, text="AccountNumber ", font=("Arial", 12, "bold"),fg="blue")
 account_number_label.grid(row=1, column=1,padx=50,pady=20)
 
 name_label = Label(root, text="Name  ", font=("Arial", 12, "bold"),fg="blue")
