@@ -13,7 +13,7 @@ def clear():
     email_entry.delete(0, END)
     phone_number_entry.delete(0, END)
     address_entry.delete(0, END)
-
+#Search
 def search():
     conn = sqlite3.connect('Bank Management System.db')
     cursor = conn.cursor()
