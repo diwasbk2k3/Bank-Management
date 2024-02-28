@@ -38,6 +38,7 @@ cursor = conn.cursor()
 cursor.execute("SELECT * FROM accounts")
 details = cursor.fetchall()
 num=2
+#Adding Details to the page
 for i in details:
     account_number_label=Label(root, text=i[0],font=("Arial", 10, "bold"))
     account_number_label.grid(row=num,column=1,padx=2,pady=5)
